@@ -9,9 +9,7 @@ var session = require('express-session');
 
 var routes = require('./routes');
 var users = require('./routes/user');
-
 var app = express();
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
