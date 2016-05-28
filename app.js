@@ -127,11 +127,11 @@ app.post('/login', function(req, res) {
   connection.query('SELECT * FROM users WHERE sessionid = ?',[id],function(err,rows) {            
       if(err) {
         
-        res.json({"message":"You are not currently logged in" +id});
+        res.json({"message":"You are not currently logged in"});
       }
       if(rows.length > 0) {
         user_ses.destroy();
-        res.json({"success":"You have been  succesfully logged out" +id});
+        res.json({"success":"You have been  succesfully logged out"});
       }
       else {
         res.json({"message":"You are not currently logged in"});
